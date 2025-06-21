@@ -1,0 +1,35 @@
+/* Unique form container */
+#form-container {
+  width: 400px;
+  margin: 50px auto;
+  background-color: #869dcd; /* Background color */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Common styling for form fields */
+.form-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Unique submit button */
+#submit-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect for submit button */
+#submit-btn:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+ .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      gap: 20px; /* space between cards */
+    }
+ .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 18px;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .card-price {
+      color: #28a745;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/28/dc/22/28dc222d39e86b4b8d702a1a74d82b42.jpg" alt="Product 1">
+      <div class="card-content">
+        <div class="card-title">Product 1</div>
+        <div class="card-price">Rs.500</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src=https://i.pinimg.com/736x/53/bf/7d/53bf7d256fde70abaa25481af7a98b89.jpg alt="Product 2">
+      <div class="card-content">
+        <div class="card-title">Product 2</div>
+        <div class="card-price">Rs.200</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src= https://i.pinimg.com/736x/6f/67/91/6f679163dcf53b45ee3b6d36372bbeed.jpg alt="Product 3">
+      <div class="card-content">
+        <div class="card-title">Product 3</div>
+        <div class="card-price">Rs.200</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/9c/fb/f7/9cfbf76feafeda5f4126d83497f7967d.jpg" alt="Product 4">
+      <div class="card-content">
+        <div class="card-title">Product 4</div>
+        <div class="card-price">Rs.300</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/5b/3f/84/5b3f841da54345437ae6a9e03f7643ff.jpg" alt="Product 5">
+      <div class="card-content">
+        <div class="card-title">Product 5</div>
+        <div class="card-price">Rs.400</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/f8/b5/f8/f8b5f8d26afc467f7270e8501e8691e7.jpg" alt="Product 6">
+      <div class="card-content">
+        <div class="card-title">Product 6</div>
+        <div class="card-price">Rs.250</gdiv>
+      </div>
+    </div>
+
+    
+  </div>
+
+</body>
+</html>

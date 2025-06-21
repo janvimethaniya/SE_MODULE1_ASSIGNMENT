@@ -1,0 +1,73 @@
+/* Center the card on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Profile card container */
+.profile-card {
+  width: 300px;
+  background-color: white;
+  border: 2px solid #333;
+  padding: 20px;          /* Padding inside the card */
+  margin: 20px;           /* Margin outside the card */
+  box-sizing: border-box; /* Includes padding and border in width */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #007BFF;
+  padding: 10px;           /* Padding inside the border */
+  margin-bottom: 15px;
+  border-radius: 70%;
+  box-sizing: content-box; /* Padding and border added outside content width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* User name */
+.name {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  border: 2px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box; /* Includes padding and border in element width */
+}
+
+/* Bio paragraph */
+.bio {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+/* Follow button */
+.follow-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.follow-btn:hover {
+  background-color: #0056b3;
+  border-color: #004080;
+}

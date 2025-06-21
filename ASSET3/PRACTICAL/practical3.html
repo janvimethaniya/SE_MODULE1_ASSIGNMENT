@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Layout Container */
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* Distribute space between sidebar and main content */
+      align-items: stretch; /* Stretch items to fill height */
+    }
+
+    .sidebar {
+      background-color: #f4f4f4;
+      padding: 20px;
+      width: 200px;
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 20px;
+      flex: 1; /* Take remaining space */
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Website Header</h1>
+    </header>
+
+    <div class="main">
+      <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Navigation links or content here.</p>
+      </div>
+      <div class="content">
+        <h2>Main Content</h2>
+        <p>This is the central area of the page.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>My Website Footer</p>
+    </footer>
+  </div>
+</body>
+</html>
