@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date Interval Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="mb-4">Date Interval</h2>
+
+    <div class="row justify-content-center g-3">
+      <div class="col-md-4">
+        <input type="date" class="form-control" id="fromDate" placeholder="From Date">
+      </div>
+      <div class="col-md-4">
+        <input type="date" class="form-control" id="toDate" placeholder="To Date">
+      </div>
+    </div>
+
+    <div class="d-grid col-2 mx-auto mt-3">
+      <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+    </div>
+
+    <div id="result" class="card mt-4 d-none bg-primary text-white text-start mx-auto" style="max-width: 400px;">
+      <div class="card-body" id="resultBody"></div>
+    </div>
+  </div>
+
+  <script>
+    function calculate() {
+      const from = new Date(document.getElementById("fromDate").value);
+      const to = new Date(document.getElementById("toDate").value);
+
+      if (isNaN(from) || isNaN(to)) {
+        alert("Please select both dates.");
+        return;
+      }
+
+      const diffTime = Math.abs(to - from);
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      const diffWeeks = Math.floor(diffDays / 7);
+      const diffMonths = Math.floor(diffDays / 30.44);
+      const diffYears = Math.floor(diffDays / 365.25);
+
+      const result = document.getElementById("result");
+      const body = document.getElementById("resultBody");
+
+      result.classList.remove("d-none");
+      body.innerHTML = `
+        <p class="mb-2">Date interval between</p>
+        <p>${from.toLocaleDateString()} and ${to.toLocaleDateString()}</p>
+        <hr class="bg-white">
+        <p>In years : ${diffYears}</p>
+        <p>In months : ${diffMonths}</p>
+        <p>In weeks : ${diffWeeks}</p>
+        <p>In days : ${diffDays}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
